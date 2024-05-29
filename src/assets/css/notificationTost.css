@@ -1,0 +1,206 @@
+/* Animation */
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes leave {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+}
+/* Toast */
+.notificationContent {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  overflow-wrap: break-word;
+  /* .pt-0\\.5 {
+        padding-top: 0.125rem;
+      } */
+  /* Custom */
+}
+.notificationContent .notificationBoxShow {
+  max-width: 300px !important;
+}
+.notificationContent .toast-enter {
+  animation: enter 0.5s;
+}
+.notificationContent .toast-leave {
+  animation: leave 0.5s;
+}
+.notificationContent .max-w-md {
+  max-width: 28rem;
+}
+.notificationContent .w-full {
+  width: 100%;
+}
+.notificationContent .bg-white {
+  background-color: #ffffff;
+}
+.notificationContent .shadow-lg {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.notificationContent .rounded-lg {
+  border-radius: 0.75rem;
+}
+.notificationContent .pointer-events-auto {
+  pointer-events: auto;
+}
+.notificationContent .flex {
+  display: flex;
+}
+.notificationContent .ring-1 {
+  border-width: 1px;
+}
+.notificationContent .ring-black {
+  --ring-color: #000000;
+  --ring-offset-color: #000000;
+}
+.notificationContent .ring-opacity-5 {
+  --ring-opacity: 0.05;
+}
+.notificationContent img {
+  width: 35px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 35px !important;
+}
+.notificationContent .nameImgProfile {
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid white;
+  display: inline-flex;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+  background-color: rgb(255, 58, 110);
+  color: white;
+}
+.notificationContent .flex-1 {
+  flex: 1 1 0%;
+}
+.notificationContent .p {
+  overflow-wrap: break-word;
+  max-width: 80px !important;
+}
+.notificationContent .p-4 {
+  padding: 1rem;
+}
+.notificationContent .items-start {
+  align-items: flex-start;
+}
+.notificationContent .flex-shrink-0 {
+  flex-shrink: 0;
+}
+.notificationContent .h-10 {
+  height: 2.5rem;
+}
+.notificationContent .w-10 {
+  width: 2.5rem;
+}
+.notificationContent .rounded-full {
+  border-radius: 9999px;
+}
+.notificationContent .ml-3 {
+  margin-left: 0.75rem;
+}
+.notificationContent .text-sm {
+  font-size: 0.875rem;
+}
+.notificationContent button {
+  padding: 0px 10px 0px 12px !important;
+  color: rgb(79, 70, 229) !important;
+}
+.notificationContent .notificationBox {
+  align-items: center;
+  display: flex;
+}
+.notificationContent .font-medium {
+  font-weight: 500;
+}
+.notificationContent p {
+  margin-bottom: 3px;
+  margin: 0px;
+}
+.notificationContent h6 {
+  margin: 0px;
+}
+.notificationContent .text-gray-900 {
+  --text-opacity: 1;
+  color: rgba(17, 24, 39, var(--text-opacity));
+}
+.notificationContent .mt-1 {
+  margin-top: 0.25rem;
+}
+.notificationContent .text-gray-500 {
+  --text-opacity: 1;
+  color: rgba(107, 114, 128, var(--text-opacity));
+}
+.notificationContent .border-l {
+  border-left-width: 1px;
+}
+.notificationContent .border-gray-200 {
+  --border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--border-opacity));
+}
+.notificationContent .w-full {
+  width: 100%;
+}
+.notificationContent .border {
+  border-width: 1px;
+}
+.notificationContent .rounded-none {
+  border-radius: 0;
+}
+.notificationContent .rounded-r-lg {
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+.notificationContent .p-4 {
+  padding: 1rem;
+}
+.notificationContent .items-center {
+  align-items: center;
+}
+.notificationContent .justify-center {
+  justify-content: center;
+}
+.notificationContent .text-indigo-600 {
+  --text-opacity: 1;
+  color: rgba(79, 70, 229, var(--text-opacity));
+}
+.notificationContent .hover\\:text-indigo-500:hover {
+  --text-opacity: 1;
+  color: rgba(99, 102, 241, var(--text-opacity));
+}
+.notificationContent .focus\\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.notificationContent .focus\\:ring-2:focus {
+  --ring-offset-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color);
+  box-shadow: 0 0 0 2px var(--ring-offset-shadow), 0 0 0 3px var(--ring-color);
+}
+.notificationContent .focus\\:ring-indigo-500:focus {
+  --ring-color: #6574cd;
+}
+.notificationContent .focus\\:ring-opacity-75:focus {
+  --ring-opacity: 0.75;
+}
+.notificationContent .animate-enter {
+  animation: enter 0.5s;
+}
+.notificationContent .animate-leave {
+  animation: leave 0.5s;
+}/*# sourceMappingURL=notificationTost.css.map */

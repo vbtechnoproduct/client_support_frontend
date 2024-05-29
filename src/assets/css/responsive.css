@@ -1,0 +1,666 @@
+@media screen and (min-device-width: 768px) and (max-device-width: 1050px) {
+  .mesageOnPage .appInfo {
+    padding: 16px;
+  }
+}
+@media only screen and (max-device-width: 768px) {
+  .mainTitle {
+    margin-bottom: 18px;
+    margin-top: 2px;
+  }
+  .mainTitle .title {
+    font-size: 23px;
+  }
+  .chatUserDetails {
+    overflow: unset;
+    height: unset;
+  }
+  .profileImgGrupe {
+    position: relative;
+  }
+  .moOnline {
+    display: block !important;
+    position: absolute;
+    bottom: -1px;
+    right: -2px;
+  }
+  .moOnline .onlineButton {
+    background-color: #00B207;
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+  }
+  .moOnline .offlineButton {
+    background-color: #db2e2e;
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+  }
+  .table-custom {
+    margin: 8px 8px 0px 8px !important;
+  }
+  .custom-pagination {
+    display: flex;
+    align-items: center;
+  }
+  .dashboard .countShow {
+    margin: 0px !important;
+  }
+  .dashboard .countShow .countShowBox {
+    height: 90%;
+  }
+  .searchButtonShow .searchButtonButton {
+    justify-content: center !important;
+  }
+  .searchButtonShow .searchButton {
+    margin-top: 10px;
+    justify-content: center !important;
+  }
+  .DeveloperPage .DeveloperDialog .mainDiaogBox {
+    max-width: 56vh !important;
+  }
+  .backButtonClick {
+    display: block !important;
+  }
+  .TicketPage .anlyticsButton {
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .TicketPage .DeveloperDialog .mainDiaogBox {
+    max-width: 56vh !important;
+  }
+  .sidebarPage {
+    display: none;
+  }
+  #mainPageBgResponsive {
+    position: fixed;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4196078431);
+    display: block;
+    justify-content: center;
+    z-index: 11;
+    align-items: center;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+  .topHeadShowChat {
+    margin-left: 24px;
+  }
+  .topHeadShowChat h6 {
+    margin-left: 20px !important;
+  }
+  .topHeadShowChat .backButtonClick {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+  }
+  .topHeadShowChat .backButtonClick svg {
+    width: 26px;
+    color: #9d9d9d;
+    height: 26px;
+  }
+  .sidebarPagemobile {
+    position: absolute;
+    top: 66px;
+  }
+  .sidebarPagemobile .sidebarTop {
+    display: none;
+  }
+  .navbar-page {
+    position: relative;
+    height: 70px;
+  }
+  .navbar-page .menuIconButton {
+    display: block !important;
+    position: absolute;
+    top: 20px;
+  }
+  .navbar-page .menuIconButton svg {
+    color: #329993;
+    width: 24px;
+    height: 24px;
+  }
+  .navbar-page .titleNav {
+    justify-content: flex-end !important;
+  }
+  .navbar-page .titleNav h6 {
+    font-size: 23px;
+    margin: 0px;
+  }
+  .navbar-page .adminProfile {
+    padding: 0px 6px;
+    height: 50px;
+    border-radius: 8px;
+    max-width: 150px;
+    min-width: 108px;
+  }
+  .navbar-page .adminProfile img {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+  }
+  .navbar-page .adminProfile span {
+    font-size: 14px;
+  }
+  .moPage {
+    margin: 0px;
+  }
+  .chatDataShow {
+    display: none;
+  }
+  .chatUserShow {
+    padding: 14px 16px 14px 16px !important;
+  }
+  .leftSideChat {
+    display: block;
+  }
+  .profileText span {
+    min-width: 40px;
+    max-width: 40px;
+  }
+  .adminPageChat .moMessageBody {
+    padding: 0px !important;
+  }
+  .adminPageChat .moMessageBody .activeChat {
+    border-left: 2px solid #329993 !important;
+  }
+  .adminPageChat .moMessageBody .userProfileContent:hover {
+    border-left: 2px solid #329993 !important;
+  }
+  .adminPageChat .moMessageBody .userProfileContent .userProfileBox {
+    border-radius: 10px;
+    padding: 10px 14px;
+  }
+  .adminPageChat .moMessageBody .userProfileContent .userProfileBox .profileImgGrupe img {
+    width: 48px;
+    height: 48px;
+  }
+  .adminPageChat .moMessageBody .userProfileContent .userProfileBox .profileText .ProfileName h6 {
+    font-size: 15px;
+  }
+  .adminPageChat .moMessageBody .userProfileContent .userProfileBox .profileText .ProfileName span {
+    font-size: 13px;
+  }
+  .adminPageChat .moMessageBody .userProfileContent .userProfileBox .profileText .timeTextShow h4 {
+    font-size: 13px;
+  }
+  .adminPageChat .moMessageBody .allChatShow {
+    height: calc(100vh - 300.55px) !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .nameImgProfile {
+    width: 23px !important;
+    height: 23px !important;
+    font-size: 10px;
+  }
+  .adminPageChat .moMessageBody .allChatShow .leftContent {
+    margin: 4px 4px 4px 2px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .leftContent .leftChat {
+    margin: 2px 2px 2px 2px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .leftContent .leftChat .messageShow .messageBodyShow {
+    padding: 8px 10px !important;
+    margin-bottom: 6px !important;
+    border-radius: 10px 10px 10px 0px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .leftContent .leftChat .messageShow .messageBodyShow span {
+    font-size: 12px !important;
+    line-height: 16px;
+  }
+  .adminPageChat .moMessageBody .allChatShow .leftContent .leftChat .messageShow .UserameShow h6 {
+    font-size: 10px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .leftContent .leftChat .chatDataProfile img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .leftContent .messageShowImg .messageShow .messageBodyShow {
+    padding: 2px 2px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .leftContent .messageShowImg .messageShow .messageBodyShow img {
+    width: 100px !important;
+    height: 100px !important;
+    margin-bottom: 6px !important;
+    border-radius: 8px !important;
+    border: 1px solid #329993;
+    padding: 3px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .rightContent {
+    margin: 4px 4px 4px 0px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .rightContent .rightChat {
+    margin: 2px 5px 1px 0px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .rightContent .rightChat .messageShow .messageBodyShow {
+    padding: 8px 10px !important;
+    margin-bottom: 6px !important;
+    border-radius: 10px 10px 0px 10px;
+  }
+  .adminPageChat .moMessageBody .allChatShow .rightContent .rightChat .messageShow .messageBodyShow span {
+    font-size: 12px !important;
+    line-height: 16px;
+  }
+  .adminPageChat .moMessageBody .allChatShow .rightContent .rightChat .messageShow .UserameShow h6 {
+    font-size: 10px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .rightContent .rightChat .chatDataProfile img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .rightContent .messageShowImg .messageShow .messageBodyShow {
+    padding: 2px 2px !important;
+  }
+  .adminPageChat .moMessageBody .allChatShow .rightContent .messageShowImg .messageShow .messageBodyShow img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 6px !important;
+    border-radius: 8px;
+    border: 1px solid #329993;
+    padding: 3px;
+  }
+  .adminPageChat .moMessageBody .leftSideChat {
+    width: 100%;
+    height: 100vh;
+  }
+  .adminPageChat .moMessageBody .chatMessageShow {
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+    padding: 0px !important;
+    position: absolute;
+    top: 0;
+  }
+  .adminPageChat .moMessageBody .chatMessageShow .backCharMessage {
+    margin-right: 13px;
+  }
+  .adminPageChat .moMessageBody .chatMessageShow .backCharMessage svg {
+    color: gray;
+    width: 26px;
+    height: 26px;
+  }
+  .adminPageChat .moMessageBody .chatMessageShow .openDetailModel {
+    position: absolute;
+    right: 16px;
+    display: block !important;
+  }
+  .adminPageChat .moMessageBody .chatMessageShow .openDetailModel button {
+    background-color: transparent;
+    border: none;
+    color: #329993;
+  }
+  .adminPageChat .moMessageBody .chatMessageShow .openDetailModel button svg {
+    width: 20px;
+    height: 20px;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat {
+    position: absolute;
+    padding: 0px;
+    right: 10%;
+    top: 95px;
+    width: 80%;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfoBg {
+    position: fixed;
+    top: 74px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4196078431);
+    display: block;
+    justify-content: center;
+    z-index: 1111;
+    align-items: center;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo {
+    display: none;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 12px;
+    z-index: 11111;
+    padding: 10px;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .appInfoHead {
+    margin-top: 10px;
+    padding: 11px 13px;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .appInfoHead span {
+    font-size: 14px;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .appInfoHead h5 {
+    font-size: 16px;
+    margin: 0px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    font-weight: 600;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .appInfoBody {
+    margin-top: 10px;
+    padding-bottom: 3px;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .appInfoBody img {
+    width: 80px;
+    margin-top: 10px;
+    height: 80px;
+    border: 2px solid #329993;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .appInfoBody h6 {
+    font-size: 17px;
+    margin-top: 16px;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .appInfoBody span {
+    font-size: 12px;
+    padding: 10px;
+    margin: 10px 0px;
+    margin-top: 6px !important;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .appInfoBody .nameImgProfile {
+    font-size: 23px !important;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .profileViewOth {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .appInfoFooter h6 {
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .appInfoFooter ul li span {
+    font-size: 12px;
+  }
+  .adminPageChat .moMessageBody .mobileDetailsChat .appInfo .appInfoFooter ul li h5 {
+    font-size: 12px;
+    margin: 3px;
+  }
+  .inputChat__suggestions {
+    min-width: 200px !important;
+    left: 0% !important;
+    width: 37%;
+  }
+  .closeTicketMessage {
+    font-size: 12px;
+    height: 30px;
+    margin-top: -8px !important;
+    margin-bottom: 8px;
+    width: 85px;
+  }
+  .closeIcon {
+    display: block !important;
+    position: absolute;
+    right: -17px;
+    top: -17px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  .closeIcon svg {
+    width: 28px;
+    height: 28px;
+    color: #393636;
+  }
+}
+@media screen and (min-device-width: 600px) and (max-device-width: 768px) {
+  .mesageOnPage .appInfo {
+    padding: 17px;
+  }
+  .mesageOnPage .appInfo .appInfoHead {
+    padding: 10px 16px;
+  }
+  .mesageOnPage .appInfo .appInfoHead span {
+    font-size: 14px;
+  }
+  .mesageOnPage .appInfo .appInfoHead h5 {
+    font-size: 20px;
+  }
+  .mesageOnPage .appInfo .appInfoBody h6 {
+    font-size: 20px;
+  }
+  .mesageOnPage .appInfo .appInfoFooter h6 {
+    font-size: 20px;
+  }
+  .mesageOnPage .appInfo .appInfoFooter ul li span {
+    font-size: 14px;
+  }
+  .mesageOnPage .appInfo .appInfoFooter ul li h5 {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-device-width: 600px) {
+  .image-viewModel .mainDiaogBox {
+    width: 90% !important;
+  }
+  .DeveloperPage .DeveloperDialog .mainDiaogBox {
+    max-width: 45vh !important;
+  }
+  .TicketPage .DeveloperDialog .mainDiaogBox {
+    max-width: 45vh !important;
+  }
+  .login-form {
+    width: 94% !important;
+  }
+  .navbar-page .titleNav h6 {
+    text-align: center;
+    margin-right: 6px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow {
+    display: block !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .topchatHead {
+    padding: 10px 10px 10px 10px !important;
+    min-height: 66px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .topchatHead .chatBodyGrupeImg {
+    margin-left: 10px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .topchatHead .chatBodyGrupeImg span {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .topchatHead .chatBodyGrupeImg img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .topchatHead .chatBodyGrupeImg h6 {
+    font-size: 16px !important;
+    margin-left: 10px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow {
+    height: calc(100vh - 300.55px) !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .nameImgProfile {
+    width: 23px !important;
+    height: 23px !important;
+    font-size: 10px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .leftContent {
+    margin: 4px 4px 4px 2px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .leftContent .leftChat {
+    margin: 2px 2px 2px 2px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .leftContent .leftChat .messageShow .messageBodyShow {
+    padding: 5px 8px;
+    margin-bottom: 6px;
+    border-radius: 13px 10px 10px 0px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .leftContent .leftChat .messageShow .messageBodyShow span {
+    font-size: 12px !important;
+    line-height: 16px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .leftContent .leftChat .messageShow .UserameShow h6 {
+    font-size: 10px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .leftContent .leftChat .chatDataProfile img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .leftContent .messageShowImg .messageShow .messageBodyShow {
+    padding: 2px 2px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .leftContent .messageShowImg .messageShow .messageBodyShow img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 6px !important;
+    border-radius: 8px;
+    border: 1px solid #329993;
+    padding: 3px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .rightContent {
+    margin: 4px 4px 4px 0px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .rightContent .rightChat {
+    margin: 2px 5px 1px 0px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .rightContent .rightChat .messageShow .messageBodyShow {
+    padding: 5px 8px;
+    margin-bottom: 6px;
+    border-radius: 10px 10px 0px 13px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .rightContent .rightChat .messageShow .messageBodyShow span {
+    font-size: 12px !important;
+    line-height: 16px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .rightContent .rightChat .messageShow .UserameShow h6 {
+    font-size: 10px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .rightContent .rightChat .chatDataProfile img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .rightContent .messageShowImg .messageShow .messageBodyShow {
+    padding: 2px 2px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataBody .allChatShow .rightContent .messageShowImg .messageShow .messageBodyShow img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 6px !important;
+    border-radius: 8px;
+    border: 1px solid #329993;
+    padding: 3px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataFooter form {
+    border-radius: 12px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataFooter form .chatButtonSend .inputChat {
+    height: 60px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataFooter form .chatButtonSend .inputChat textarea {
+    font-size: 12px !important;
+    padding: 0px 10px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .chatDataFooter form .socialButton {
+    margin: 23px 18px !important;
+    padding-top: 6px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .emojiModel {
+    right: 101px !important;
+    bottom: -26px !important;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .emojiModel .closeModel svg {
+    width: 24px;
+    height: 24px;
+  }
+  .mesageOnPage .messageConetnt .chatDataShow .emojiModel .emoji-picker-react {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .mesageOnPage .mobileDetailsChat {
+    position: absolute;
+    padding: 0px;
+    right: 10%;
+    top: 17%;
+    width: 80%;
+  }
+  .mesageOnPage .mobileDetailsChat .appInfoBg {
+    position: fixed;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4196078431);
+    display: block;
+    justify-content: center;
+    z-index: 1111;
+    align-items: center;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+  .mesageOnPage .mobileDetailsChat .appInfo {
+    display: none;
+    border-radius: 10px;
+    position: relative;
+    z-index: 11111;
+    padding: 10px;
+  }
+  .mesageOnPage .mobileDetailsChat .appInfo .appInfoHead {
+    margin-top: 10px;
+    padding: 11px 13px;
+  }
+  .mesageOnPage .mobileDetailsChat .appInfo .appInfoHead span {
+    font-size: 14px;
+  }
+  .mesageOnPage .mobileDetailsChat .appInfo .appInfoHead h5 {
+    font-size: 16px;
+    margin: 0px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    font-weight: 600;
+  }
+  .mesageOnPage .mobileDetailsChat .appInfo .appInfoBody {
+    margin-top: 10px;
+    padding-bottom: 3px;
+  }
+  .mesageOnPage .mobileDetailsChat .appInfo .appInfoBody img {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #329993;
+  }
+  .mesageOnPage .mobileDetailsChat .appInfo .appInfoBody h6 {
+    font-size: 17px;
+    margin-top: 16px;
+  }
+  .mesageOnPage .mobileDetailsChat .appInfo .appInfoBody span {
+    font-size: 12px;
+    padding: 6px;
+    margin: 10px 0px;
+    margin-top: 6px !important;
+  }
+  .mesageOnPage .mobileDetailsChat .appInfo .appInfoFooter h6 {
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .mesageOnPage .mobileDetailsChat .appInfo .appInfoFooter ul li span {
+    font-size: 12px;
+  }
+  .mesageOnPage .mobileDetailsChat .appInfo .appInfoFooter ul li h5 {
+    font-size: 12px;
+    margin: 3px;
+  }
+  .mesageOnPage .openDetailModel {
+    position: absolute;
+    right: 16px;
+    display: block !important;
+  }
+  .mesageOnPage .openDetailModel button {
+    background-color: transparent;
+    border: none;
+    color: #329993;
+  }
+  .mesageOnPage .openDetailModel button svg {
+    width: 20px;
+    height: 20px;
+  }
+  .inputChat__suggestions__item .userMentionShow span {
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=responsive.css.map */
