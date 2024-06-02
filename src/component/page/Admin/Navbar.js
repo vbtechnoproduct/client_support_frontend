@@ -40,6 +40,10 @@ export default function Navbar(props) {
                     <h6>Client Support</h6>
                 </div>
                 <div className='col-4 col-sm-6 d-flex justify-content-end align-items-center'>
+                    <div className="notificationShow">
+                        <span>10</span>
+                        <button><IoIosNotifications /></button>
+                    </div>
                     <div className='adminProfile'>
                         <img src={getAdmin?.image ? getAdmin?.image : AdminImg} />
                         <span>{getAdmin?.name ? getAdmin?.name : " Admin"}</span>

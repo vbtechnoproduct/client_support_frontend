@@ -99,7 +99,8 @@
             object-fit: cover;
             border-radius: 50%;
         }
-        span{
+
+        span {
             margin-left: -8px;
         }
     }
@@ -151,6 +152,7 @@
                 justify-content: flex-start;
                 padding: 4px 8px 4px 12px;
                 height: 44px;
+
                 &:hover {
                     background: rgba(0, 167, 111, 0.08);
                     color: rgb(0, 167, 111);
@@ -248,6 +250,39 @@
             text-transform: capitalize;
         }
     }
+
+    .notificationShow {
+        position: relative;
+        display: flex;
+        width: 55px;
+        height: 55px;
+        align-items: center;
+        margin-right: 16px;
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            color: white;
+            background-color: #ff0808;
+            padding: 1px 4px;
+            font-size: 14px;
+            border-radius: 50%;
+        }
+
+        button {
+            color: none;
+            outline: none;
+            border: none;
+            background-color: transparent;
+
+            svg {
+                fill: rgb(99, 115, 129);
+                font-size: 28px;
+                color: rgb(99, 115, 129);
+            }
+        }
+    }
 }
 
 .dashboard {
@@ -307,7 +342,8 @@
             }
         }
     }
-    .chartShow{
+
+    .chartShow {
         margin-top: 6vh;
         box-shadow: 0 6px 30px rgba(182, 186, 203, 0.3);
         margin-bottom: 24px;
@@ -598,10 +634,12 @@
                 .infinite-scroll-component {
                     overflow-x: scroll !important;
                 }
-                .chatDataHeader{
+
+                .chatDataHeader {
                     position: relative;
                 }
-                .allChatUserShow{
+
+                .allChatUserShow {
                     position: relative;
                     display: flex;
                     flex-direction: column;
@@ -1797,6 +1835,110 @@
 
         span {
             font-size: 16px;
+        }
+    }
+
+    .showProfileBox {
+        background-color: rgb(255, 255, 255);
+        color: rgb(33, 43, 54);
+        margin-top: 20px;
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        background-image: none;
+        overflow: hidden;
+        position: relative;
+        box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 2px 0px, rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
+        border-radius: 16px;
+        z-index: 0;
+        margin-bottom: 24px;
+        height: 300px;
+        padding-bottom: 60px;
+
+        .profileImgshow {
+            background: linear-gradient(rgba(0, 75, 80, 0.8), rgba(0, 75, 80, 0.8)) center center / cover no-repeat, url('../images/profileBg.jpg');
+            height: 100%;
+            color: rgb(255, 255, 255);
+
+            .showAvtar {
+                position: absolute;
+                bottom: 20px;
+                z-index: 999999;
+                left: 30px;
+                display: flex;
+
+                img {
+                    border: 2px solid rgb(255, 255, 255) !important;
+                    width: 160px !important;
+                    padding: 0px !important;
+                    height: 160px !important;
+                }
+
+                .showTextAdmin {
+                    margin: 24px 40px 0px !important;
+
+                    h5 {
+                        margin: 0px;
+                        display: block;
+                        color: white;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        line-height: 1.5;
+                    }
+
+                    h6 {
+                        margin: 4px 0px 0px;
+                        color: inherit;
+                        display: block;
+                        line-height: 1.57143;
+                        font-size: 0.875rem;
+                        color: white;
+                        font-family: "Public Sans", sans-serif;
+                        font-weight: 400;
+                        opacity: 0.48;
+                    }
+                }
+            }
+        }
+
+        .showTab {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 60px;
+            align-items: center;
+
+            .activeTab {
+                border-bottom: 2px solid rgb(33, 43, 54);
+                svg{
+                    color: rgb(33, 43, 54) !important;
+                }
+                span{
+                    color: rgb(33, 43, 54) !important;
+                }
+            }
+
+            .showTabBox {
+                margin-top: 3px;
+                display: flex;
+                cursor: pointer;
+                justify-content: flex-end;
+                padding: 0px;
+                min-width: 48px;
+                margin: 0px 28px;
+                min-height: 48px;
+
+                align-items: center;
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    color: rgb(99, 115, 129);
+                }
+
+                span {
+                    color: rgb(99, 115, 129);
+                    margin-left: 6px;
+                    font-size: 16px;
+                }
+            }
         }
     }
 }

@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 import Title from "../../extras/Title";
 import { useDispatch, useSelector } from "react-redux";
 import { FaRegEdit } from "react-icons/fa";
+import { HiIdentification } from "react-icons/hi2";
+import { RiLockPasswordFill } from "react-icons/ri";
 import { AiFillCamera } from "react-icons/ai";
 import { MdPassword } from "react-icons/md";
 import { getAdmin, updateAdmin, updateAdminPassword } from "../../redux/slice/authSlice";
@@ -25,6 +27,7 @@ export const AdminProfile = () => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [oldPassword, setOldPassword] = useState("");
+  const [activeTab,setActiveTab]=useState("profile")
   const [data, setData] = useState({});
 
   const { admin } = useSelector((state) => state.auth);
@@ -133,7 +136,7 @@ export const AdminProfile = () => {
   return (
     <div className="mainAdminProfile">
       <Title name="Admin Profile" />
-      <div class="d-lg-flex d-md-block">
+      {/* <div class="d-lg-flex d-md-block">
         <div className="col-12 col-sm-12 col-md-12 col-lg-3 mt-4 me-4">
           <div className="card" style={{ minHeight: "500px" }}>
             <div className="card-body">
@@ -378,6 +381,69 @@ export const AdminProfile = () => {
           </div>
         </div>
         <div className="col-0 col-sm-0 col-md-0 col-lg-3 mt-4 me-4"></div>
+      </div> */}
+      <div className="showProfileBox">
+        <div className="profileImgshow">
+          <div className="showAvtar">
+            <div className="position-relative">
+              <input
+                id="file-input"
+                type="file"
+                accept="image/*"
+                className="d-none"
+                onChange={(e) => handleUploadImage(e)}
+              />
+              <img
+                src={imagePath ? imagePath : Male}
+                alt="admin"
+                className="mx-auto p-1 border "
+                onError={(e) => {
+                  e.target.src = Male;
+                }}
+                style={{
+                  width: 180,
+                  height: 180,
+                  objectFit: "cover",
+                  display: "block",
+                  borderRadius: "50%",
+                }}
+                onClick={() => handlePrevious(imagePath)}
+              />
+              {error?.image && <p className="errorMessage text-danger text-capitalize">{error?.image}</p>}
+              <div
+                className="position-absolute"
+                style={{ bottom: "-2%", right: "45%" }}
+              >
+                <div className="bg-theme"
+                  style={{
+                    // background: "rgb(31, 28, 48)",
+                    borderRadius: 50,
+                    height: 29,
+                  }}
+                >
+                  <label className="imgUploadProfile" htmlFor="file-input">
+                    <AiFillCamera
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div className="showTextAdmin">
+              <h5>{name ? name : "Name"}</h5>
+              <h6>Admin</h6>
+            </div>
+          </div>
+        </div>
+        <div className="showTab">
+          <div className={`showTabBox ${activeTab === "profile" ? "activeTab":""}`} onClick={()=>setActiveTab("profile")}>
+            <HiIdentification />
+            <span>Profile</span>
+          </div>
+          <div className={`showTabBox ${activeTab === "password" ? "activeTab":""}`} onClick={()=>setActiveTab("password")}>
+            <RiLockPasswordFill />
+            <span>Password</span>
+          </div>
+        </div>
       </div>
     </div>
   );
