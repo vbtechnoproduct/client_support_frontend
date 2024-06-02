@@ -388,9 +388,9 @@
         border-left: 0px;
         border-radius: 8px !important;
         border-top-left-radius: 0px !important;
-        background-color: #339993;
+        background-color: rgb(0, 167, 111);
         border-bottom-left-radius: 0px !important;
-        border: 1px solid #339993 !important;
+        border: 1px solid rgb(0, 167, 111) !important;
     }
 }
 
@@ -637,7 +637,7 @@
             right: 0;
             top: 0;
             width: 40px;
-            background-color: #339993;
+            background-color: rgb(0, 167, 111);
             height: 40px;
             display: flex;
             cursor: pointer;
@@ -647,8 +647,8 @@
             justify-content: center;
 
             &:hover {
-                background-color: #4ea5a0;
-                border-color: #4ea5a0;
+                background-color: rgb(0, 120, 103);
+                border-color: rgb(0, 120, 103);
             }
 
             svg {
@@ -859,8 +859,8 @@
 }
 
 .newButton {
-    background-color: #339993;
-    border: 1px solid #339993;
+    background-color: rgb(0, 167, 111);
+    border: 1px solid rgb(0, 167, 111);
     padding: 5px;
     max-width: 82px;
     height: 38px;
@@ -873,8 +873,8 @@
     font-size: 14px;
 
     &:hover {
-        background-color: #4ea5a0;
-        border-color: #4ea5a0;
+        background-color: rgb(0, 120, 103);
+        border-color: rgb(0, 120, 103);
     }
 
     svg {

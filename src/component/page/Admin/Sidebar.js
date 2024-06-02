@@ -38,6 +38,7 @@ export default function Sidebar() {
         <div className='sidebarPage'>
             <div className='sidebarTop'>
                 <img src={getAdmin?.image ? getAdmin?.image : AdminImg} />
+                <span>{getAdmin?.name ? getAdmin?.name : " Admin"}</span>
             </div>
             <div className='nav-show'>
                 <ul>
@@ -46,49 +47,49 @@ export default function Sidebar() {
                             <span className='dash-micon'>
                                 <IoHomeOutline />
                             </span>
-                            {/* <span className='dash-mtext'>
+                            <span className='dash-mtext'>
                                 Dashboard
-                            </span> */}
+                            </span>
                         </NavLink>
                         <NavLink to="client" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
                                 <FaRegUser />
                             </span>
-                            {/* <span className='dash-mtext'>
+                             <span className='dash-mtext'>
                                 Client
-                            </span> */}
+                            </span>
                         </NavLink>
                         <NavLink to="developer" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
                                 <FaRegUserCircle />
                             </span>
-                            {/* <span className='dash-mtext'>
+                           <span className='dash-mtext'>
                                 Devloper
-                            </span> */}
+                            </span> 
                         </NavLink>
                         <NavLink to="ticket" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
                                 <IoTicketOutline />
                             </span>
-                            {/* <span className='dash-mtext'>
+                             <span className='dash-mtext'>
                                 Ticket
-                            </span> */}
+                            </span> 
                         </NavLink>
                         <NavLink to="/admin/message" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
                                 <BiMessageDetail />
                             </span>
-                            {/* <span className='dash-mtext'>
+                             <span className='dash-mtext'>
                                 Message
-                            </span> */}
+                            </span> 
                         </NavLink>
                         <NavLink to="/admin/adminProfile" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
                                 <AiFillProfile />
                             </span>
-                            {/* <span className='dash-mtext'>
+                             <span className='dash-mtext'>
                                 Message
-                            </span> */}
+                            </span> 
                         </NavLink>
                         <Link >
                             <div onClick={() => hadndleLogout()}>
@@ -96,9 +97,9 @@ export default function Sidebar() {
                                 <span className='dash-micon'>
                                     <IoLogOutOutline />
                                 </span>
-                                {/* <span className='dash-mtext'>
+                                 <span className='dash-mtext'>
                                     LogOut
-                                </span> */}
+                                </span> 
                             </div>
                         </Link>
                     </li>
