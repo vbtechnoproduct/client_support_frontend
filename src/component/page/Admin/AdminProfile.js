@@ -27,7 +27,7 @@ export const AdminProfile = () => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [oldPassword, setOldPassword] = useState("");
-  const [activeTab,setActiveTab]=useState("profile")
+  const [activeTab, setActiveTab] = useState("profile")
   const [data, setData] = useState({});
 
   const { admin } = useSelector((state) => state.auth);
@@ -435,15 +435,175 @@ export const AdminProfile = () => {
           </div>
         </div>
         <div className="showTab">
-          <div className={`showTabBox ${activeTab === "profile" ? "activeTab":""}`} onClick={()=>setActiveTab("profile")}>
+          <div className={`showTabBox ${activeTab === "profile" ? "activeTab" : ""}`} onClick={() => setActiveTab("profile")}>
             <HiIdentification />
             <span>Profile</span>
           </div>
-          <div className={`showTabBox ${activeTab === "password" ? "activeTab":""}`} onClick={()=>setActiveTab("password")}>
+          <div className={`showTabBox ${activeTab === "password" ? "activeTab" : ""}`} onClick={() => setActiveTab("password")}>
             <RiLockPasswordFill />
             <span>Password</span>
           </div>
         </div>
+      </div>
+      <div className="showPasswordBox">
+        {
+          activeTab === "profile" ? (
+            <div className="profileEdit">
+              <div className="row">
+                <div className="col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7 mx-auto my-5">
+                  <div className='mb-3'>
+                    <Input
+                      type={`text`}
+                      id={`name`}
+                      name={`name`}
+                      value={name}
+                      label={`Name`}
+                      placeholder={`Name`}
+                      errorMessage={error.name && error.name}
+                      onChange={(e) => {
+                        setName(e.target.value);
+                        if (!e.target.value) {
+                          return setError({
+                            ...error,
+                            name: `Name is Required`,
+                          });
+                        } else {
+                          return setError({
+                            ...error,
+                            name: "",
+                          });
+                        }
+                      }}
+                    />
+                  </div>
+                  <div className='mb-3'>
+                    <Input
+                      type={`text`}
+                      id={`email`}
+                      name={`email`}
+                      value={email}
+                      label={`Email`}
+                      placeholder={`Email`}
+                      errorMessage={error.email && error.email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        if (!e.target.value) {
+                          return setError({
+                            ...error,
+                            email: `Email is Required`,
+                          });
+                        } else {
+                          return setError({
+                            ...error,
+                            email: "",
+                          });
+                        }
+                      }}
+                    />
+                  </div>
+                  <div className="d-flex justify-content-end mt-2">
+                    <Button
+                      className={"submitButton"}
+                      text={`Submit`}
+                      type={"button"}
+                      onClick={handleEditName}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) :
+            (
+              <div className="row">
+                <div className="col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7 mx-auto">
+                  <div className='mb-3'>
+                    <Input
+                      type={`text`}
+                      id={`oldPassword`}
+                      name={`oldPassword`}
+                      value={oldPassword}
+                      label={`Old password`}
+                      placeholder={`Old password`}
+                      errorMessage={error.oldPassword && error.oldPassword}
+                      onChange={(e) => {
+                        setOldPassword(e.target.value);
+                        if (!e.target.value) {
+                          return setError({
+                            ...error,
+                            oldPassword: `Old password is Required`,
+                          });
+                        } else {
+                          return setError({
+                            ...error,
+                            oldPassword: "",
+                          });
+                        }
+                      }}
+                    />
+                  </div>
+                  <div className='mb-3'>
+                    <Input
+                      type={`text`}
+                      id={`newPassword`}
+                      name={`newPassword`}
+                      value={newPassword}
+                      label={`New password`}
+                      placeholder={`New password`}
+                      errorMessage={error.newPassword && error.newPassword}
+                      onChange={(e) => {
+                        setNewPassword(e.target.value);
+                        if (!e.target.value) {
+                          return setError({
+                            ...error,
+                            newPassword: `New password is Required`,
+                          });
+                        } else {
+                          return setError({
+                            ...error,
+                            newPassword: "",
+                          });
+                        }
+                      }}
+                    />
+                  </div>
+                  <div className='mb-3'>
+                    <Input
+                      type={`text`}
+                      id={`confirmPassword`}
+                      name={`confirmPassword`}
+                      value={confirmPassword}
+                      label={`Confirm Password`}
+                      placeholder={`Confirm Password`}
+                      errorMessage={error.confirmPassword && error.confirmPassword}
+                      onChange={(e) => {
+                        setConfirmPassword(e.target.value);
+                        if (!e.target.value) {
+                          return setError({
+                            ...error,
+                            confirmPassword: `Confirm Password is Required`,
+                          });
+                        } else {
+                          return setError({
+                            ...error,
+                            confirmPassword: "",
+                          });
+                        }
+                      }}
+                    />
+                  </div>
+                  <div className="d-flex justify-content-end">
+                    <Button
+                      className={"submitButton"}
+                      text={`Submit`}
+                      type={"button"}
+                      onClick={handleChangePassword}
+                    />
+                  </div>
+                </div>
+              </div>
+            )
+        }
+
       </div>
     </div>
   );

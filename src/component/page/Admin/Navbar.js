@@ -46,7 +46,6 @@ export default function Navbar(props) {
                     </div>
                     <div className='adminProfile'>
                         <img src={getAdmin?.image ? getAdmin?.image : AdminImg} />
-                        <span>{getAdmin?.name ? getAdmin?.name : " Admin"}</span>
                     </div>
                 </div>
             </div>

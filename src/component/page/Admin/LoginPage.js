@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { FaInfoCircle } from "react-icons/fa";
 import { login } from "../../redux/slice/authSlice";
 import Input from "../../extras/Input";
 import Button from '../../extras/Button'
@@ -48,7 +49,7 @@ export default function LoginPage() {
 
   return (
     <div className='loginPage'>
-      <div className='bg-login'>
+      {/* <div className='bg-login'>
       </div>
       <div className='login-form'>
         <h6>Admin Login</h6>
@@ -112,6 +113,21 @@ export default function LoginPage() {
             onClick={submit}
           />
         </form>
+      </div> */}
+      <div className='row'>
+        <div className='col-12 col-8'>
+
+        </div>
+        <div className='col-12 col-8'>
+          <div className='loginFormShow'>
+            <h6 className='loginTitle'>Sign in to Client Support</h6>
+            <div className='demoLoginBox'>
+              <FaInfoCircle />
+              <h6>Use email : <span>demo@clientsupport.com</span> / password :<span> demo1234</span></h6>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div >
   )

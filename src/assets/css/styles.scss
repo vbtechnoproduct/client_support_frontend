@@ -17,6 +17,44 @@
     min-height: 100vh;
     background: white;
 
+    .loginFormShow{
+        display: flex;
+        flex-direction: column;
+        color: rgb(33, 43, 54);
+        width: 100%;
+        margin-left: auto;
+        background-color: rgb(255, 255, 255);
+        margin-right: auto;
+        max-width: 480px;
+        .loginTitle{
+            font-size: 1.5rem;
+            color: rgb(33, 43, 54);
+        }
+        .demoLoginBox{
+            transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            border-radius: 8px;
+            box-shadow: none;
+            background-image: none;
+            line-height: 1.57143;
+            font-size: 0.875rem;
+            font-family: "Public Sans", sans-serif;
+            font-weight: 400;
+            display: flex;
+            padding: 6px 16px;
+            color: rgb(0, 55, 104);
+            background-color: rgb(202, 253, 245);
+            margin-bottom: 24px;
+            svg{
+                color: rgb(0, 184, 217);
+                font-size: 20px;
+            }
+            h6{
+                padding: 8px 0px;
+                min-width: 0px;
+                overflow: auto;
+            }
+        }
+    }
     .bg-login {
         background: #e9f1f0 !important;
         content: "";
@@ -210,7 +248,7 @@
 
 .navbar-page {
     height: 80px;
-    background-color: #e9f1f0;
+    background-color: #fbfbfb;
     padding: 0px 24px;
 
     .titleNav {
@@ -224,30 +262,66 @@
         }
     }
 
+    // .adminProfile {
+    //     max-width: 166px;
+    //     min-width: 137px;
+    //     background-color: white;
+    //     display: flex;
+    //     border-radius: 10px;
+    //     align-items: center;
+    //     border: 1px solid #cbcbcb;
+    //     padding: 0px 10px;
+    //     height: 58px;
+    //     justify-content: center;
+
+    //     img {
+    //         width: 44px;
+    //         height: 44px;
+    //         object-fit: cover;
+    //         margin-right: 13px;
+    //         border-radius: 50%;
+    //     }
+
+    //     span {
+    //         color: #525b69;
+    //         font-size: 16px;
+    //         text-transform: capitalize;
+    //     }
+    // }
     .adminProfile {
-        max-width: 166px;
-        min-width: 137px;
-        background-color: white;
-        display: flex;
-        border-radius: 10px;
+        display: inline-flex;
         align-items: center;
-        border: 1px solid #cbcbcb;
-        padding: 0px 10px;
-        height: 58px;
+        -webkit-box-pack: center;
         justify-content: center;
+        position: relative;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+        outline: 0px;
+        border: 0px;
+        margin: 0px;
+        cursor: pointer;
+        user-select: none;
+        vertical-align: middle;
+        appearance: none;
+        text-decoration: none;
+        text-align: center;
+        flex: 0 0 auto;
+        font-size: 1.5rem;
+        padding: 8px;
+        border-radius: 50%;
+        overflow: visible;
+        color: rgb(99, 115, 129);
+        transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        width: 55px;
+        height: 55px;
+        background: rgba(145, 158, 171, 0.08);
 
         img {
-            width: 44px;
-            height: 44px;
+            width: 53px;
+            height: 53px;
             object-fit: cover;
-            margin-right: 13px;
             border-radius: 50%;
-        }
-
-        span {
-            color: #525b69;
-            font-size: 16px;
-            text-transform: capitalize;
+            border: 2px solid rgb(255, 255, 255);
         }
     }
 
@@ -771,9 +845,9 @@
             }
 
             .activeChat {
-                background-color: #E8F7F7;
+                background-color: rgba(0, 167, 111, 0.16);
                 border: none;
-                border-left: 3px solid #329993;
+                border-left: 3px solid rgb(0, 167, 111);
 
                 .nameImgProfile {
                     outline: 2px solid white;
@@ -786,8 +860,8 @@
                 border-radius: 16px;
 
                 &:hover {
-                    background-color: #E8F7F7;
-                    border-left: 3px solid #329993;
+                    background-color: rgba(0, 167, 111, 0.16);
+                    border-left: 3px solid rgb(0, 167, 111);
 
                     .nameImgProfile {
                         outline: 2px solid white;
@@ -1548,7 +1622,7 @@
         border-bottom: 1px solid #E3E8E7;
 
         span {
-            color: #329993;
+            color: rgb(17, 141, 87);
             font-weight: 700;
             font-size: 14px;
             padding: 10px;
@@ -1596,7 +1670,7 @@
         margin-top: 20px;
         border-radius: 14px;
         padding: 14px 20px;
-        background-color: #329993;
+        background-color: rgb(0, 167, 111);
 
         span {
             color: #ffffff;
@@ -1907,10 +1981,12 @@
 
             .activeTab {
                 border-bottom: 2px solid rgb(33, 43, 54);
-                svg{
+
+                svg {
                     color: rgb(33, 43, 54) !important;
                 }
-                span{
+
+                span {
                     color: rgb(33, 43, 54) !important;
                 }
             }
@@ -1940,6 +2016,59 @@
                 }
             }
         }
+    }
+
+    .showPasswordBox {
+        background-color: rgb(255, 255, 255);
+        color: rgb(33, 43, 54);
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        background-image: none;
+        overflow: hidden;
+        padding: 25px;
+        margin-bottom: 25px;
+        position: relative;
+        box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 2px 0px, rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
+        border-radius: 16px;
+        z-index: 0;
+
+        button {
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: relative;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            outline: 0px;
+            border: 0px currentcolor;
+            margin: 0px;
+            cursor: pointer;
+            user-select: none;
+            vertical-align: middle;
+            appearance: none;
+            text-decoration: none;
+            font-weight: 700;
+            line-height: 1.71429;
+            font-size: 0.875rem;
+            text-transform: unset;
+            font-family: "Public Sans", sans-serif;
+            min-width: 64px;
+            padding: 6px 12px;
+            border-radius: 8px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            box-shadow: none;
+            color: rgb(255, 255, 255);
+            background-color: rgb(33, 43, 54);
+
+            &:hover {
+                background-color: rgb(69, 79, 91);
+            }
+
+
+        }
+
+        .profileEdit {}
     }
 }
 

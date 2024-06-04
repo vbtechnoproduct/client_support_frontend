@@ -5,7 +5,9 @@ import { FaCriticalRole, FaRegUserCircle } from "react-icons/fa";
 import $ from 'jquery'
 import { FaRegUser } from "react-icons/fa";
 import { BiMessageDetail } from "react-icons/bi";
+import { CgProfile } from "react-icons/cg";
 import { AiFillProfile } from "react-icons/ai";
+import { RiCustomerService2Line } from "react-icons/ri";
 import { IoHomeOutline } from "react-icons/io5";
 import AdminImg from '../../../assets/images/AvtarImg.png'
 import { logOut } from '../../utils/Alert';
@@ -61,7 +63,7 @@ export default function Sidebar() {
                         </NavLink>
                         <NavLink to="developer" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
-                                <FaRegUserCircle />
+                                <RiCustomerService2Line />
                             </span>
                            <span className='dash-mtext'>
                                 Devloper
@@ -85,10 +87,10 @@ export default function Sidebar() {
                         </NavLink>
                         <NavLink to="/admin/adminProfile" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
-                                <AiFillProfile />
+                                <CgProfile />
                             </span>
                              <span className='dash-mtext'>
-                                Message
+                                Profile
                             </span> 
                         </NavLink>
                         <Link >
