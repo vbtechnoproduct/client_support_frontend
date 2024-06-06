@@ -4,6 +4,7 @@ import { FaInfoCircle } from "react-icons/fa";
 import { login } from "../../redux/slice/authSlice";
 import Input from "../../extras/Input";
 import Button from '../../extras/Button'
+import LoginBg from '../../../assets/images/loginBg.png'
 import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
@@ -115,16 +116,77 @@ export default function LoginPage() {
         </form>
       </div> */}
       <div className='row'>
-        <div className='col-12 col-8'>
-
+        <div className='col-12 col-sm-6'>
+          <div className='loginBgImg'>
+          <img src={LoginBg} />
+          </div>
         </div>
-        <div className='col-12 col-8'>
+        <div className='col-12 col-sm-6'>
           <div className='loginFormShow'>
-            <h6 className='loginTitle'>Sign in to Client Support</h6>
+            <h6 className='loginTitle'>Sign in to Client Support Admin</h6>
             <div className='demoLoginBox'>
               <FaInfoCircle />
               <h6>Use email : <span>demo@clientsupport.com</span> / password :<span> demo1234</span></h6>
             </div>
+            <form className='w-100'>
+          <div className='mb-3'>
+            <Input
+              type={`text`}
+              id={`email`}
+              name={`email`}
+              label={`Email`}
+              value={email}
+              placeholder={`Email`}
+              errorMessage={error.email && error.email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (!e.target.value) {
+                  return setError({
+                    ...error,
+                    email: `Email Id is Required`,
+                  });
+                } else {
+                  return setError({
+                    ...error,
+                    email: "",
+                  });
+                }
+              }}
+            />
+          </div>
+          <div className='mb-3'>
+            <Input
+              type={`password`}
+              id={`password`}
+              name={`password`}
+              value={password}
+              label={`Password`}
+              placeholder={`Password`}
+              errorMessage={error.password && error.password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                if (!e.target.value) {
+                  return setError({
+                    ...error,
+                    password: `Password is Required`,
+                  });
+                } else {
+                  return setError({
+                    ...error,
+                    password: "",
+                  });
+                }
+              }}
+            />
+          </div>
+          <Button
+            text={"Login"}
+            className={"w-100"}
+            type={"submit"}
+            onKeyPress={handleKeyPressInput}
+            onClick={submit}
+          />
+        </form>
           </div>
         </div>
 
