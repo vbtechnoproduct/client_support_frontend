@@ -115,18 +115,18 @@ export default function LoginPage() {
           />
         </form>
       </div> */}
-      <div className='row'>
+      <div className='row' style={{alignItems:"center"}}>
         <div className='col-12 col-sm-6'>
           <div className='loginBgImg'>
           <img src={LoginBg} />
           </div>
         </div>
-        <div className='col-12 col-sm-6'>
+        <div className='col-12 col-sm-6 showFrom'>
           <div className='loginFormShow'>
-            <h6 className='loginTitle'>Sign in to Client Support Admin</h6>
+            <h6 className='loginTitle'>Sign Up to Client Support Admin</h6>
             <div className='demoLoginBox'>
               <FaInfoCircle />
-              <h6>Use email : <span>demo@clientsupport.com</span> / password :<span> demo1234</span></h6>
+              <h6>Use email : <span>demo@clientsupport.com</span> / password :<span>1234</span></h6>
             </div>
             <form className='w-100'>
           <div className='mb-3'>

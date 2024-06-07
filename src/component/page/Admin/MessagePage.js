@@ -969,7 +969,7 @@ export default function MessagePage() {
                             style={{
                               color: "white",
                               textAlign: "center",
-                              backgroundColor: "#32999396",
+                              backgroundColor: "rgb(0, 167, 111)",
                               padding: "6px",
                             }}
                           >

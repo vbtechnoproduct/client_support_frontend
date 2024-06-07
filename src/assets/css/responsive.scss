@@ -15,7 +15,35 @@
             font-size: 23px;
         }
     }
-
+    .loginPage{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        .loginBgImg{
+            width: 100px;
+        }
+        .showFrom{
+            width: 100% !important;
+        }
+        .loginFormShow{
+            .loginTitle{
+                font-size: 17px;
+                margin-top: 12px;
+            }
+            .demoLoginBox{
+                padding: 5px 10px;
+            svg{
+                font-size: 17px;
+                margin-right: 8px;
+            }
+            h6{
+                margin-bottom: 0px;
+                font-size: 12px;
+            }
+            }
+    
+        }
+    }
     .chatUserDetails {
         overflow: unset;
         height: unset;

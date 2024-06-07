@@ -177,11 +177,12 @@
 .sidebarPage {
     background: #FFFFFF;
     box-shadow: none;
+    border-right: 1px dashed rgba(145, 158, 171, 0.2);
     z-index: 1026;
     width: 180px;
     position: fixed;
     height: 100vh;
-    border-right: 1px solid #E3E8E7;
+    // border-right: 1px solid #E3E8E7;
     top: 0;
     left: 0;
 
@@ -423,6 +424,7 @@
 
 .dashboard {
     padding: 13px 17px;
+    margin-bottom: 38px;
 
     .countShow {
         margin-top: 40px;
@@ -672,7 +674,7 @@
         .downarrowMessage {
             background-color: transparent;
             border: none;
-            color: #329993;
+            color: rgb(0, 167, 111);
             position: absolute;
             // top: -2px;
             // right: 0px;
@@ -689,7 +691,7 @@
         .downarrowMessageRight {
             background-color: transparent;
             border: none;
-            color: #329993;
+            color: rgb(0, 167, 111);
             position: absolute;
             // top: -2px;
             // right: 0px;
@@ -1143,7 +1145,7 @@
                                     max-width: 45vh;
                                     margin-bottom: 10px;
                                     border-bottom-right-radius: 0;
-                                    background-color: #329993;
+                                    background-color: rgb(0, 167, 111);
 
                                     span {
                                         color: #FFFFFF;
@@ -1194,7 +1196,7 @@
                                     cursor: pointer;
                                     object-fit: cover;
                                     border-radius: 14px;
-                                    border: 1px solid #329993;
+                                    border: 1px solid rgb(0, 167, 111);
                                     padding: 5px;
                                 }
                             }
@@ -1284,7 +1286,7 @@
                         .sendButtonIcon {
                             svg {
                                 width: 25px;
-                                color: #329993;
+                                color: rgb(0, 167, 111);
                                 height: 25px;
                             }
                         }
@@ -1716,7 +1718,7 @@
             height: 136px;
             object-fit: cover;
             border-radius: 50%;
-            border: 4px solid #329993;
+            border: 4px solid rgb(0, 167, 111);
         }
 
         h6 {
@@ -1779,7 +1781,7 @@
                 }
 
                 h5 {
-                    color: #329993;
+                    color: rgb(0, 167, 111);
                     font-weight: 500;
                     margin-top: 3px;
                     font-size: 15px;
@@ -1920,13 +1922,13 @@
     ul {
         li {
             svg {
-                color: #329993;
+                color: rgb(0, 167, 111);
                 width: 20px;
                 height: 20px;
             }
 
             span {
-                color: #329993;
+                color: rgb(0, 167, 111);
                 cursor: pointer;
                 font-weight: 600;
                 font-size: 15px;

@@ -545,8 +545,11 @@
                     }
 
                     .discripton {
-                        width: 100%;
-                        text-align: center;
+                        text-overflow: ellipsis;
+                        width: 30%;
+                        white-space: pre;
+                        line-height: 10px;
+                        text-align: left;
                     }
                 }
             }
