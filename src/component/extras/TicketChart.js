@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ReactApexChart from 'react-apexcharts';
+import Chart from 'react-apexcharts';
 
 const TicketChart = (props) => {
     const { dashboardCount } = props;
@@ -15,40 +15,31 @@ const TicketChart = (props) => {
         console.log(showCount?.totalTickets, showCount?.totalOpenTickets, showCount?.totalClosedTickets);
     }, [dashboardCount]);
 
-    const chartOptions = {
+    const options = {
         chart: {
-            width: 380,
             type: 'pie',
         },
-        labels: ['Total Tickets', 'Total Open Tickets','Total ReOpen Tickets', 'Total Closed Tickets'],
-        colors: ['rgb(255, 58, 110)', 'rgb(62, 201, 214)',,'rgb(255, 162, 29)', '#ff0000'], // Colors array
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: 200
-                },
-                legend: {
-                    position: 'bottom'
-                }
-            }
-        }]
+        labels: ['Total Tickets', 'Total Open Tickets', 'Total ReOpen Tickets', 'Total Closed Tickets'],
+        legend: {
+            position: 'bottom',
+        },
+        colors: ['#00a651', '#ffcc5c', '#005c91', '#ff6f31'],
     };
 
+    // const series = [43.8, 31.3, 18.8, 6.3];
+    // const series = [showCount?.totalTickets, showCount?.totalOpenTickets, reopenTicketTotal, showCount?.totalClosedTickets];
+    const series = [
+        showCount?.totalTickets || 0,
+        showCount?.totalOpenTickets || 0,
+        reopenTicketTotal || 0,
+        showCount?.totalClosedTickets || 0,
+    ];
     return (
         <div>
-            <div id="chart">
+            <div id="chart" className='d-flex justify-content-center'>
                 {
-                    showCount !== undefined && (
-                        <ReactApexChart
-                        options={{
-                            ...chartOptions,
-                            colors: ['rgb(255, 58, 110)', 'rgb(62, 201, 214)','rgb(255, 162, 29)', '#ff0000'] // Specify colors here
-                        }}
-                            series={[showCount?.totalTickets, showCount?.totalOpenTickets,reopenTicketTotal, showCount?.totalClosedTickets]}
-                            type="pie"
-                            width={380}
-                        />
+                    showCount?.totalTickets !== undefined && (
+                        <Chart options={options} series={series} type="pie" width={400} />
                     )
                 }
             </div>

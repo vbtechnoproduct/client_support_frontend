@@ -126,7 +126,7 @@ export default function LoginPage() {
             <h6 className='loginTitle'>Sign Up to Client Support Admin</h6>
             <div className='demoLoginBox'>
               <FaInfoCircle />
-              <h6>Use email : <span>demo@clientsupport.com</span> / password :<span>1234</span></h6>
+              <h6>Use email : <span>demo@clientsupport.com</span> / password :<span>123456</span></h6>
             </div>
             <form className='w-100'>
           <div className='mb-3'>
