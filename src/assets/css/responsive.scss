@@ -27,7 +27,7 @@
             align-items: baseline;
 
             img {
-                width: 36%;
+                width: 43%;
             }
         }
 
@@ -195,9 +195,23 @@
         }
     }
 
+    .chartShow {
+        display: block;
+        overflow: hidden !important;
+    }
+
     .navbar-page {
         position: relative;
         height: 70px;
+
+        .titleNav {
+            justify-content: flex-start !important;
+            padding-left: 43px !important;
+
+            h6 {
+                display: none !important;
+            }
+        }
 
         .menuIconButton {
             display: block !important;
@@ -212,8 +226,6 @@
         }
 
         .titleNav {
-            justify-content: flex-end !important;
-
             h6 {
                 font-size: 23px;
                 margin: 0px;
