@@ -116,7 +116,7 @@ export default function LoginPage() {
         </form>
       </div> */}
       <div className='row' style={{alignItems:"center"}}>
-        <div className='col-12 col-sm-6'>
+        <div className='col-12 col-sm-6 loginImg'>
           <div className='loginBgImg'>
           <img src={LoginBg} />
           </div>

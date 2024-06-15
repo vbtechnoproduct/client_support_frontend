@@ -147,13 +147,13 @@ export default function Dashboard() {
                 </div>
             </div>
             <div className='row'>
-                <div className='col-12 col-lg-6 '>
+                <div className='col-12 col-xl-6 '>
                     <div className='chartShow'>
                         <h6>Tickets Chart</h6>
                         <TicketChart dashboardCount={dashboardCount} />
                     </div>
                 </div>
-                <div className='col-12 mt-3 mt-lg-0 col-lg-6 '>
+                <div className='col-12 mt-3 mt-xl-0 col-xl-6 '>
                     <div className='developerBox'>
                         <h6>Developer</h6>
                         <div className='tableShowMain'>

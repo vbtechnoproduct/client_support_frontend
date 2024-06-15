@@ -15,35 +15,53 @@
             font-size: 23px;
         }
     }
-    .loginPage{
+
+    .loginPage {
         align-items: center;
         display: flex;
         flex-direction: column;
-        .loginBgImg{
+
+        .loginImg {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+
+            img {
+                width: 36%;
+            }
+        }
+
+        .loginBgImg {
             width: 100px;
         }
-        .showFrom{
+
+        .showFrom {
             width: 100% !important;
         }
-        .loginFormShow{
-            .loginTitle{
+
+        .loginFormShow {
+            .loginTitle {
                 font-size: 17px;
                 margin-top: 12px;
             }
-            .demoLoginBox{
+
+            .demoLoginBox {
                 padding: 5px 10px;
-            svg{
-                font-size: 17px;
-                margin-right: 8px;
+
+                svg {
+                    font-size: 17px;
+                    margin-right: 8px;
+                }
+
+                h6 {
+                    margin-bottom: 0px;
+                    font-size: 12px;
+                }
             }
-            h6{
-                margin-bottom: 0px;
-                font-size: 12px;
-            }
-            }
-    
+
         }
     }
+
     .chatUserDetails {
         overflow: unset;
         height: unset;

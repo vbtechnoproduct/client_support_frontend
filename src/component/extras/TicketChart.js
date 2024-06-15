@@ -38,9 +38,12 @@ const TicketChart = (props) => {
         <div>
             <div id="chart" className='d-flex justify-content-center'>
                 {
-                    showCount?.totalTickets !== undefined && (
+                    showCount?.totalTickets !== undefined ? (
                         <Chart options={options} series={series} type="pie" width={400} />
-                    )
+                    ) :
+                        (
+                            <div style={{ width: "400px" }}></div>
+                        )
                 }
             </div>
             <div id="html-dist"></div>
