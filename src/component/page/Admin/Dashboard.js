@@ -169,7 +169,7 @@ export default function Dashboard() {
                                 </thead>
                                 <tbody>
                                     {
-                                        developerAdminData?.map((item) => {
+                                        developerAdminData?.length > 0 ? developerAdminData?.map((item) => {
                                             return (
                                                 <>
                                                     <tr>
@@ -195,6 +195,8 @@ export default function Dashboard() {
                                                 </>
                                             )
                                         })
+                                            :
+                                            <div style={{ width: "auto", top:"48%",left:"43%", zIndex: "11", fontWeight: "500", position: "absolute", opacity: "0.8" }}>Not Developers...</div>
                                     }
                                     <tr>
 

@@ -88,6 +88,14 @@ export default function Sidebar() {
                                 Dashboard
                             </span>
                         </NavLink>
+                        <NavLink to="ticket" onClick={() => hadnleOnClick()}>
+                            <span className='dash-micon'>
+                                <IoTicketOutline />
+                            </span>
+                            <span className='dash-mtext'>
+                                Ticket
+                            </span>
+                        </NavLink>
                         <NavLink to="client" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
                                 <FaRegUser />
@@ -104,14 +112,7 @@ export default function Sidebar() {
                                 Devloper
                             </span>
                         </NavLink>
-                        <NavLink to="ticket" onClick={() => hadnleOnClick()}>
-                            <span className='dash-micon'>
-                                <IoTicketOutline />
-                            </span>
-                            <span className='dash-mtext'>
-                                Ticket
-                            </span>
-                        </NavLink>
+                       
                         <NavLink to="/admin/message" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
                                 <BiMessageDetail />

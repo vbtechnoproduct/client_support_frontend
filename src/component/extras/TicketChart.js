@@ -36,14 +36,16 @@ const TicketChart = (props) => {
     ];
     return (
         <div>
-            <div id="chart" className='d-flex justify-content-center'>
+            <div id="chart" style={{minHeight:"300px"}} className='d-flex justify-content-center position-relative'>
+            {
+                    showCount?.totalTickets === 0 && (
+                        <div style={{ width: "auto",top:"30%",zIndex:"11",fontWeight:"500",position:"absolute",opacity:"0.8" }}>Not Tickets...</div>
+                    )
+                }
                 {
-                    showCount?.totalTickets !== undefined ? (
+                    showCount?.totalTickets !== undefined && (
                         <Chart options={options} series={series} type="pie" width={400} />
-                    ) :
-                        (
-                            <div style={{ width: "400px" }}></div>
-                        )
+                    )
                 }
             </div>
             <div id="html-dist"></div>
