@@ -2,10 +2,12 @@ import React, { useEffect } from 'react'
 import AdminImg from '../../../assets/images/AvtarImg.png'
 import { useSelector } from 'react-redux';
 import $ from 'jquery'
-import { IoIosNotifications } from "react-icons/io";
 import { IoMdMenu } from "react-icons/io";
+import LogoNew from '../../../assets/images/LogoNew.png'
+import { IoIosNotifications } from "react-icons/io";
 
-export default function DevNavbar(props) {
+
+export default function Navbar(props) {
     const { admin } = useSelector((state) => state.auth);
 
     const getAdmin = JSON.parse(sessionStorage.getItem("devDetails"))
@@ -36,16 +38,16 @@ export default function DevNavbar(props) {
             <div className='menuIconButton' style={{ display: "none" }} onClick={() => hadnleShowDetailModel()}><IoMdMenu /></div>
             <div className='row h-100'>
                 <div className='col-8 col-sm-6 titleNav'>
+                    <img src={LogoNew} style={{width:"40px"}}/>
                     <h6>Client Support</h6>
                 </div>
                 <div className='col-4 col-sm-6 d-flex justify-content-end align-items-center'>
-                    <div className='notificationIcon'>
-                        <IoIosNotifications />
-                        <span>{props.notificationCount ? props.notificationCount?.length : 0}</span>
+                    <div className="notificationShow">
+                        <span>10</span>
+                        <button><IoIosNotifications /></button>
                     </div>
                     <div className='adminProfile'>
                         <img src={getAdmin?.image ? getAdmin?.image : AdminImg} />
-                        <span>{getAdmin?.name ? getAdmin?.name : " Developer"}</span>
                     </div>
                 </div>
             </div>

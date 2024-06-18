@@ -569,7 +569,11 @@
             margin-left: 25px;
 
         }
-
+.devTable{
+    th{
+        text-align: left !important;
+    }
+}
         .tableShowMain {
             display: block;
             max-height: 300px;
@@ -635,11 +639,29 @@
                                     color: transparent;
                                     text-indent: 10000px;
                                 }
+
                             }
 
                             span {
                                 margin-left: 10px;
                             }
+                        }
+
+                        .devName {
+                        }
+
+                        .nameImgProfile {
+                            align-items: center;
+                            justify-content: center;
+                            text-transform: capitalize;
+                            outline: 2px solid #d7d7d7;
+                            display: inline-flex;
+                            width: 45px !important;
+                            height: 45px !important;
+                            margin-left: 0px !important;
+                            border-radius: 50%;
+                            background-color: rgb(255, 58, 110);
+                            color: white;
                         }
 
                         .online-indicator {

@@ -1,26 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '../../../assets/images/Logo.png'
 import { IoLogOutOutline, IoTicketOutline } from "react-icons/io5";
 import { FaCriticalRole, FaRegUserCircle } from "react-icons/fa";
+import $ from 'jquery'
 import { FaRegUser } from "react-icons/fa";
 import { BiMessageDetail } from "react-icons/bi";
+import { CgProfile } from "react-icons/cg";
+import { IoIosArrowForward } from "react-icons/io";
+import { AiFillProfile } from "react-icons/ai";
+import { RiCustomerService2Line } from "react-icons/ri";
+import { IoIosArrowBack } from "react-icons/io";
 import { IoHomeOutline } from "react-icons/io5";
 import AdminImg from '../../../assets/images/AvtarImg.png'
-import { AiFillProfile } from "react-icons/ai";
-import $ from 'jquery'
 import { logOut } from '../../utils/Alert';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-export default function DevSidebar() {
+export default function Sidebar() {
     const navigate = useNavigate()
-    const getDev = JSON.parse(sessionStorage.getItem("devDetails"))
-
+    const location = useLocation()
+    const getAdmin = JSON.parse(sessionStorage.getItem("devDetails"))
+    const [sideIcon, setSideIcon] = useState(false)
     const hadndleLogout = () => {
         logOut().then((result) => {
             if (result.isConfirmed) {
-                sessionStorage.clear()
                 setTimeout(() => {
-                    navigate("/devLogin")
+                    sessionStorage.clear()
+                    navigate("/devlogin")
                 }, 500);
             }
         });
@@ -33,10 +38,44 @@ export default function DevSidebar() {
             $('#mainPageBgResponsive ').css("display", "none");
         }
     }
+
+    const handleIconShow = () => {
+    }
+
+    useEffect(() => {
+        if (location.pathname === "/admin/message") {
+            $('.sidebarPage').addClass('sideIcon');
+            $('.main').addClass('sideIconMain');
+            setSideIcon(true)
+        }
+    }, [location])
+
+    useEffect(() => {
+        if (location.pathname !== "/admin/message") {
+            if (sideIcon) {
+                $('.sidebarPage').addClass('sideIcon');
+                $('.main').addClass('sideIconMain');
+            } else {
+                $('.sidebarPage').removeClass('sideIcon');
+                $('.main').removeClass('sideIconMain');
+            }
+        }
+    }, [sideIcon, location])
+
     return (
         <div className='sidebarPage'>
+            <div className='arrowSidebar' onClick={() => setSideIcon(!sideIcon)}>
+                {
+                    sideIcon
+                        ?
+                        <IoIosArrowForward />
+                        :
+                        <IoIosArrowBack />
+                }
+            </div>
             <div className='sidebarTop'>
-                <img src={getDev?.image ? getDev?.image : AdminImg} />
+                <img src={getAdmin?.image ? getAdmin?.image : AdminImg} />
+                <span>{getAdmin?.name ? getAdmin?.name : " Admin"}</span>
             </div>
             <div className='nav-show'>
                 <ul>
@@ -45,33 +84,33 @@ export default function DevSidebar() {
                             <span className='dash-micon'>
                                 <IoHomeOutline />
                             </span>
-                            {/* <span className='dash-mtext'>
+                            <span className='dash-mtext'>
                                 Dashboard
-                            </span> */}
+                            </span>
                         </NavLink>
-                        <NavLink to="/dev/ticket" onClick={() => hadnleOnClick()}>
+                        <NavLink to="ticket" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
                                 <IoTicketOutline />
                             </span>
-                            {/* <span className='dash-mtext'>
+                            <span className='dash-mtext'>
                                 Ticket
-                            </span> */}
+                            </span>
                         </NavLink>
                         <NavLink to="/dev/chat" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
                                 <BiMessageDetail />
                             </span>
-                            {/* <span className='dash-mtext'>
+                            <span className='dash-mtext'>
                                 Message
-                            </span> */}
+                            </span>
                         </NavLink>
                         <NavLink to="/dev/devProfile" onClick={() => hadnleOnClick()}>
                             <span className='dash-micon'>
-                                <AiFillProfile />
+                                <CgProfile />
                             </span>
-                            {/* <span className='dash-mtext'>
-                                Message
-                            </span> */}
+                            <span className='dash-mtext'>
+                                Profile
+                            </span>
                         </NavLink>
                         <Link >
                             <div onClick={() => hadndleLogout()}>
@@ -79,9 +118,9 @@ export default function DevSidebar() {
                                 <span className='dash-micon'>
                                     <IoLogOutOutline />
                                 </span>
-                                {/* <span className='dash-mtext'>
+                                <span className='dash-mtext'>
                                     LogOut
-                                </span> */}
+                                </span>
                             </div>
                         </Link>
                     </li>
