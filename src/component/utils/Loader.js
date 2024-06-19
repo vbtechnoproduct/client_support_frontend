@@ -13,7 +13,11 @@ const Loader = () => {
       {roleLoader && (
         <div className='loader'>
           <div className='loaderShow'>
-            <div class="spinner"></div>
+            <div class="three-body">
+              <div class="three-body__dot"></div>
+              <div class="three-body__dot"></div>
+              <div class="three-body__dot"></div>
+            </div>
           </div>
         </div>
       )}
