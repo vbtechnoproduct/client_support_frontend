@@ -73,14 +73,12 @@ function App() {
         <Route path="/chat/:id/:otherId" element={<MessageOnePage />} />
 
         <Route element={<PrivateRoute />}>
-          {/* {
+          {
             getUser === "dev" ?
               <Route path='/dev/*' element={<Developer />} />
               :
               <Route path="/admin/*" element={<Admin />} />
-          } */}
-              <Route path='/dev/*' element={<Developer />} />
-              <Route path="/admin/*" element={<Admin />} />
+          }
         </Route>
       </Routes>
     </div>

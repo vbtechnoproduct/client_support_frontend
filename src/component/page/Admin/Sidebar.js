@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Logo from '../../../assets/images/Logo.png'
 import { IoLogOutOutline, IoTicketOutline } from "react-icons/io5";
 import { FaCriticalRole, FaRegUserCircle } from "react-icons/fa";
 import $ from 'jquery'

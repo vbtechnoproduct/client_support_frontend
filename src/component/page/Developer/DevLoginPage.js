@@ -118,7 +118,7 @@ export default function DevLoginPage() {
         </div>
         <div className='col-12 col-sm-6 showFrom'>
           <div className='loginFormShow'>
-            <h6 className='loginTitle'>Sign Up to Client Support Developer</h6>
+            <h6 className='loginTitle'>Sign Up to Ticket support Developer</h6>
             <form className='w-100'>
               <div className='mb-3'>
                 <Input

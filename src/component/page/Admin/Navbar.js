@@ -39,7 +39,7 @@ export default function Navbar(props) {
             <div className='row h-100'>
                 <div className='col-8 col-sm-6 titleNav'>
                     <img src={LogoNew} style={{width:"40px"}}/>
-                    <h6>Client Support</h6>
+                    <h6>Ticket Support</h6>
                 </div>
                 <div className='col-4 col-sm-6 d-flex justify-content-end align-items-center'>
                     <div className="notificationShow">
