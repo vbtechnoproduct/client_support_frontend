@@ -47,7 +47,7 @@ export default function Navbar(props) {
                         <button><IoIosNotifications /></button>
                     </div>
                     <div className='adminProfile'>
-                        <img src={getAdmin?.image ? getAdmin?.image : AdminImg} />
+                        <img src={ AdminImg} />
                     </div>
                 </div>
             </div>

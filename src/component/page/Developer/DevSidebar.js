@@ -73,7 +73,7 @@ export default function Sidebar() {
                 }
             </div>
             <div className='sidebarTop'>
-                <img src={getAdmin?.image ? getAdmin?.image : AdminImg} />
+                <img src={ AdminImg} />
                 <span>{getAdmin?.name ? getAdmin?.name : " Admin"}</span>
             </div>
             <div className='nav-show'>
