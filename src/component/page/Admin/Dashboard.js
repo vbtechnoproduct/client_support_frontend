@@ -190,7 +190,7 @@ export default function Dashboard() {
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>{item?.lastLogin}</td>
+                                                        <td>{item?.lastLogin ? item?.lastLogin :"-"}</td>
                                                     </tr>
                                                 </>
                                             )
