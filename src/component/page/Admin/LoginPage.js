@@ -32,8 +32,8 @@ export default function LoginPage() {
       return setError(error);
     } else {
       const loginData = {
-        email,
-        password,
+        email:email?.trim(),
+        password:password,
       };
 
       dispatch(login(loginData))
