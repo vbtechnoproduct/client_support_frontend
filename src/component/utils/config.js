@@ -1,4 +1,5 @@
 export const baseURL = "https://client-support-backend.onrender.com/";
+export const project_baseURL = "https://ticketsupport-azure.vercel.app/";
 // export const baseURL = "https://clientsupport.codderlab.com/";
 // export const baseURL = "http://192.168.29.136:5044/";
 // export const baseURL ="http://localhost:5036/"
