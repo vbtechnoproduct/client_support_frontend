@@ -18,7 +18,7 @@ import { FiPlus } from "react-icons/fi";
 import { baseURL } from '../../utils/config'
 import Button from '../../extras/Button'
 import DeveloperDialogue from './dialogue/DeveloperDialogue'
-import { warning } from '../../utils/Alert'
+import { permissionError, warning } from '../../utils/Alert'
 import { IoIosCopy } from "react-icons/io";
 import TicketDialogue from './dialogue/TicketDialogue'
 import TicketView from './dialogue/TicketView'
@@ -28,6 +28,7 @@ import TicketDialogueDeveloperEdit from './dialogue/TicketDialogueDeveloperEdit'
 
 export default function TicketPage() {
     const [data, setData] = useState("")
+    const getAdminData = JSON.parse(sessionStorage.getItem("admin"))
     const [search, setSearch] = useState("");
     const [page, setPage] = useState(1);
     const [startDate, setStartDate] = useState("All");
@@ -84,11 +85,19 @@ export default function TicketPage() {
     }
 
     const handleReopenTicket = (row) => {
-        const payload = {
-            clientId: row?.client?._id,
-            id: row?._id
+        if (getAdminData?.email === "demo@ticketsupport.com") {
+            permissionError().then((result) => {
+                if (result.isConfirmed) {
+
+                }
+            });
+        } else {
+            const payload = {
+                clientId: row?.client?._id,
+                id: row?._id
+            }
+            dispatch(reopenTicket(payload))
         }
-        dispatch(reopenTicket(payload))
     }
 
     const handleDelete = (id) => {
@@ -100,11 +109,39 @@ export default function TicketPage() {
     }
 
     const hadnleViewTicket = (data) => {
-        dispatch(openDialog({ type: "ticketView", data: data }))
+        if (getAdminData?.email === "demo@ticketsupport.com") {
+            permissionError().then((result) => {
+                if (result.isConfirmed) {
+
+                }
+            });
+        } else {
+            dispatch(openDialog({ type: "ticketView", data: data }))
+        }
+    }
+
+    const hadleNewTicketModel = () => {
+        if (getAdminData?.email === "demo@ticketsupport.com") {
+            permissionError().then((result) => {
+                if (result.isConfirmed) {
+
+                }
+            });
+        } else {
+            dispatch(openDialog({ type: "ticket" }))
+        }
     }
 
     const hadnleEdit = (data) => {
-        dispatch(openDialog({ type: "editTicket", data: data }))
+        if (getAdminData?.email === "demo@ticketsupport.com") {
+            permissionError().then((result) => {
+                if (result.isConfirmed) {
+
+                }
+            });
+        } else {
+            dispatch(openDialog({ type: "editTicket", data: data }))
+        }
     }
 
     const ticketTable = [
@@ -235,7 +272,7 @@ export default function TicketPage() {
                         text={"New"}
                         className={"newButton"}
                         style={{ marginRight: "16px" }}
-                        onClick={() => dispatch(openDialog({ type: "ticket" }))}
+                        onClick={() => hadleNewTicketModel()}
                         bIcon={<FiPlus />}
                     />
                     <Analytics
@@ -290,7 +327,7 @@ export default function TicketPage() {
                         <TicketView />
                     )
                 }
-                 {
+                {
                     dialogueType === "editTicket" && (
                         <TicketDialogueDeveloperEdit />
                     )

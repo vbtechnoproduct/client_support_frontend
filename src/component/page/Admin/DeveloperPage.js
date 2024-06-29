@@ -14,13 +14,14 @@ import { FiPlus } from "react-icons/fi";
 import { baseURL } from '../../utils/config'
 import Button from '../../extras/Button'
 import DeveloperDialogue from './dialogue/DeveloperDialogue'
-import { warning } from '../../utils/Alert'
+import { permissionError, warning } from '../../utils/Alert'
 import { AvtarImg } from '../../extras/AvtarImg';
 
 export default function DeveloperPage() {
     const [data, setData] = useState("")
     const [search, setSearch] = useState("");
     const [page, setPage] = useState(1);
+    const getAdminData = JSON.parse(sessionStorage.getItem("admin"))
     const [rowsPerPage, setRowsPerPage] = useState(10);
     const { dialogue, dialogueType } = useSelector((state) => state.dialogue);
     const { developerAdminData, totalDeveloperAdmin } = useSelector((state) => state.developerAdmin);
@@ -65,12 +66,44 @@ export default function DeveloperPage() {
             setData(filteredData);
         }
     };
+
+    const hadnleEditModel = (row) => {
+        if (getAdminData?.email === "demo@ticketsupport.com") {
+            permissionError().then((result) => {
+                if (result.isConfirmed) {
+
+                }
+            });
+        } else {
+            dispatch(openDialog({ type: "developer", data: row }))
+        }
+    }
+    const hadnleNewModelOpen = () => {
+        if (getAdminData?.email === "demo@ticketsupport.com") {
+            permissionError().then((result) => {
+                if (result.isConfirmed) {
+
+                }
+            });
+        } else {
+            dispatch(openDialog({ type: "developer" }))
+        }
+    }
+
     const handleDelete = (id) => {
-        warning("Delete").then((result) => {
-            if (result.isConfirmed) {
-                dispatch(deleteDeveloper(id));
-            }
-        });
+        if (getAdminData?.email === "demo@ticketsupport.com") {
+            permissionError().then((result) => {
+                if (result.isConfirmed) {
+
+                }
+            });
+        } else {
+            warning("Delete").then((result) => {
+                if (result.isConfirmed) {
+                    dispatch(deleteDeveloper(id));
+                }
+            });
+        }
     }
 
     const clientTable = [
@@ -123,7 +156,7 @@ export default function DeveloperPage() {
                 <div className='action-button'>
                     <Button
                         className={"editButton"}
-                        onClick={() => dispatch(openDialog({ type: "developer", data: row }))}
+                        onClick={() => hadnleEditModel()}
                         bIcon={<TiEdit />}
                     />
                     <Button
@@ -146,7 +179,7 @@ export default function DeveloperPage() {
                     <Button
                         text={"New"}
                         className={"newButton"}
-                        onClick={() => dispatch(openDialog({ type: "developer" }))}
+                        onClick={() => hadnleNewModelOpen()}
                         bIcon={<FiPlus />}
                     />
                 </div>
