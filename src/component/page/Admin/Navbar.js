@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
-import AdminImg from '../../../assets/images/AvtarImg.png'
+import AdminImg from '../../../assets/noImg.jpg'
 import { useSelector } from 'react-redux';
 import $ from 'jquery'
 import { IoMdMenu } from "react-icons/io";
+import {permissionError} from '../../utils/Alert'
 import LogoNew from '../../../assets/images/LogoNew.png'
 import { IoIosNotifications } from "react-icons/io";
 
@@ -11,7 +12,17 @@ export default function Navbar(props) {
     const { admin } = useSelector((state) => state.auth);
 
     const getAdmin = JSON.parse(sessionStorage.getItem("admin"))
+    const hadnleNotification = () => {
+        if (getAdmin?.email === "demo@ticketsupport.com") {
+            permissionError().then((result) => {
+                if (result.isConfirmed) {
 
+                }
+            });
+        } else {
+
+        }
+    }
 
     const hadnleShowDetailModel = () => {
         $('.sidebarPage').each(function () {
@@ -38,16 +49,16 @@ export default function Navbar(props) {
             <div className='menuIconButton' style={{ display: "none" }} onClick={() => hadnleShowDetailModel()}><IoMdMenu /></div>
             <div className='row h-100'>
                 <div className='col-8 col-sm-6 titleNav'>
-                    <img src={LogoNew} style={{width:"40px"}}/>
+                    <img src={LogoNew} style={{ width: "40px" }} />
                     <h6>Ticket Support</h6>
                 </div>
                 <div className='col-4 col-sm-6 d-flex justify-content-end align-items-center'>
                     <div className="notificationShow">
                         <span>10</span>
-                        <button><IoIosNotifications /></button>
+                        <button onClick={() => hadnleNotification()}><IoIosNotifications /></button>
                     </div>
                     <div className='adminProfile'>
-                    <img src={getAdmin?.image ? getAdmin?.image :AdminImg} />
+                        <img src={AdminImg} />
                     </div>
                 </div>
             </div>

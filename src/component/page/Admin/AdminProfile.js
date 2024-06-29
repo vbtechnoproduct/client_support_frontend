@@ -11,8 +11,9 @@ import { AiFillCamera } from "react-icons/ai";
 import { MdPassword } from "react-icons/md";
 import { getAdmin, updateAdmin, updateAdminPassword } from "../../redux/slice/authSlice";
 import Button from "../../extras/Button";
-import Male from "../../../assets/images/AvtarImg.png";
+import Male from '../../../assets/noImg.jpg'
 import Input from "../../extras/Input";
+import { permissionError } from "../../utils/Alert";
 
 export const AdminProfile = () => {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ export const AdminProfile = () => {
   const [image, setImage] = useState([]);
   const [imagePath, setImagePath] = useState("");
   const [toggle, setToggle] = useState(false)
+  const getAdminData = JSON.parse(sessionStorage.getItem("admin"))
 
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -64,6 +66,13 @@ export const AdminProfile = () => {
 
 
   const handleUploadImage = (e) => {
+    if (getAdminData?.email === "demo@ticketsupport.com") {
+      permissionError().then((result) => {
+          if (result.isConfirmed) {
+
+          }
+      });
+  } else{
     setImage(e.target.files[0]);
     setImagePath(URL.createObjectURL(e.target.files[0]));
     setError((prevErrors) => ({
@@ -76,10 +85,18 @@ export const AdminProfile = () => {
       data: formData
     }
     dispatch(updateAdmin(payload))
+  }
   };
 
   const handleChangePassword = () => {
     // if (!hasPermission) return permissionError();
+    if (getAdminData?.email === "demo@ticketsupport.com") {
+      permissionError().then((result) => {
+          if (result.isConfirmed) {
+
+          }
+      });
+  } else{
     if (
       !newPassword ||
       !confirmPassword ||
@@ -107,10 +124,18 @@ export const AdminProfile = () => {
       }
       dispatch(updateAdminPassword(payload));
     }
+  }
   };
 
   const handleEditName = () => {
     // if (!hasPermission) return permissionError();
+    if (getAdminData?.email === "demo@ticketsupport.com") {
+      permissionError().then((result) => {
+          if (result.isConfirmed) {
+
+          }
+      });
+  } else{
     if (!imagePath || !name || !email) {
 
       let error = {}
@@ -127,6 +152,7 @@ export const AdminProfile = () => {
       }
       dispatch(updateAdmin(payload))
     }
+  }
   };
 
   const handlePrevious = (url) => {

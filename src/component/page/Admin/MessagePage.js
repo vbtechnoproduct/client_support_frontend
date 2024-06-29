@@ -44,6 +44,7 @@ import Picker from "emoji-picker-react";
 import { NavLink } from "react-router-dom";
 import ImageViewDialogue from "./dialogue/ImageViewDialogue";
 import { openDialog } from "../../redux/slice/dialogueSlice";
+import { permissionError } from "../../utils/Alert";
 
 dayjs.extend(utc); // Extend dayjs with utc plugin
 dayjs.extend(timezone);
@@ -58,6 +59,7 @@ export default function MessagePage() {
   ];
   const randomIndex = Math.floor(Math.random() * replayBorderColor?.length);
   const { dialogue, dialogueType } = useSelector((state) => state.dialogue);
+  const getAdminData = JSON.parse(sessionStorage.getItem("admin"))
 
   const {
     messageAdmin,
@@ -296,6 +298,13 @@ export default function MessagePage() {
   };
 
   const handleSendMessage = () => {
+    if (getAdminData?.email === "demo@ticketsupport.com") {
+      permissionError().then((result) => {
+          if (result.isConfirmed) {
+
+          }
+      });
+  } else {
     $(".messages__listData").animate({ scrollTop: $(document).height() }, 1000);
     const scrollableDiv = document.getElementById("scrollableDiv");
     scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
@@ -358,6 +367,7 @@ export default function MessagePage() {
       setShowReplay(null);
       // setAllChatData((prevState) => [...prevState, chatDataSet]);
     }
+  }
   };
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
@@ -375,6 +385,14 @@ export default function MessagePage() {
     }
   };
   const handleUpload = (e) => {
+
+    if (getAdminData?.email === "demo@ticketsupport.com") {
+      permissionError().then((result) => {
+          if (result.isConfirmed) {
+
+          }
+      });
+  } else{
     if (e.target.files[0].type === "application/x-zip-compressed") {
       const dateObject = new Date();
       const dateString = dateObject?.toISOString();
@@ -442,6 +460,7 @@ export default function MessagePage() {
       };
       dispatch(imgUploadAdminChat(payload));
     }
+  }
   };
 
   const fetch = () => {
@@ -689,6 +708,13 @@ export default function MessagePage() {
   const handleBackMenu = () => {};
 
   const hadnleTicketClose = async () => {
+    if (getAdminData?.email === "demo@ticketsupport.com") {
+      permissionError().then((result) => {
+          if (result.isConfirmed) {
+
+          }
+      });
+  } else{
     const payload = {
       id: userDetailShow?.ticket?._id,
     };
@@ -696,6 +722,7 @@ export default function MessagePage() {
     if (response?.status) {
       setTicketStatus(2);
     }
+  }
   };
 
   const handleMobileChatView = () => {

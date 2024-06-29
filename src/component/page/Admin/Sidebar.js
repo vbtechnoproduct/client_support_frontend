@@ -10,7 +10,7 @@ import { AiFillProfile } from "react-icons/ai";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoHomeOutline } from "react-icons/io5";
-import AdminImg from '../../../assets/images/AvtarImg.png'
+import AdminImg from '../../../assets/noImg.jpg'
 import { logOut } from '../../utils/Alert';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 
@@ -73,7 +73,7 @@ export default function Sidebar() {
                 }
             </div>
             <div className='sidebarTop'>
-                <img src={getAdmin?.image ? getAdmin?.image :AdminImg} />
+                <img src={AdminImg} />
                 <span>{getAdmin?.name ? getAdmin?.name : " Admin"}</span>
             </div>
             <div className='nav-show'>
